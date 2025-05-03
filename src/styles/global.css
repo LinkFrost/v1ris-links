@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sanchez: "Sanchez", "sans-serrif";
+}
+
+@theme {
+  --color-v1risGray: #1c1c21;
+  --color-v1risDarkPurple: #17144c;
+}
+
+.baseLayout {
+  @apply w-full flex flex-col items-center font-sanchez mx-auto relative min-h-screen bg-[url(/img/digital-connection-album-cover.png)] backdrop-blur-xl bg-local bg-cover bg-center text-center py-24;
+}

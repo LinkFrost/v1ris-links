@@ -1,16 +1,149 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import "../styles/global.css";
 
+import Soundcloud from "../../public/svg/soundcloud.svg";
+import Spotify from "../../public/svg/spotify.svg";
+import BandCamp from "../../public/svg/bandcamp.svg";
+import BlueSky from "../../public/svg/bluesky.svg";
+import Instagram from "../../public/svg/instagram.svg";
+
+const svgColor = "#000000";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<!-- <a
+  class="hover:scale-125"
+  href="https://soundcloud.com/v1ris"
+  target="_blank"
+  name="soundcloud"
+>
+  <Soundcloud fill={svgColor} />
+</a>
+
+<a
+  class="hover:scale-125"
+  href="https://open.spotify.com/artist/3QAWVvdQIrW5GGXjhXT5tH"
+  target="_blank"
+  name="spotify"
+>
+  <Spotify fill={svgColor} />
+</a>
+
+<a
+  class="hover:scale-125"
+  href="https://v1ris.bandcamp.com/album/bury-yourself"
+  target="_blank"
+  name="bandcamp"
+>
+  <BandCamp fill={svgColor} />
+</a>
+
+<a
+  class="hover:scale-125"
+  href="https://bsky.app/profile/v1ris.com"
+  target="_blank"
+  name="bluesky"
+>
+  <BlueSky fill={svgColor} />
+</a>
+
+<a
+  class="hover:scale-125"
+  href="https://www.instagram.com/v1ris_music/"
+  target="_blank"
+  name="instagram"
+>
+  <Instagram fill={svgColor} />
+</a> -->
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION} restrictWidth={false}>
+  <main>
+    <div
+      class="py-12 px-8 flex flex-col gap-8 w-lg rounded-xl bg-v1risDarkPurple/50 backdrop-blur-xs"
+    >
+      <h1
+        class="text-6xl font-semibold text-white text-shadow drop-shadow-xl shadow-white"
+      >
+        v1ris
+      </h1>
+
+      <h2 class="text-3xl">New Single Out Now!</h2>
+
+      <p
+        class="aspect-square items-center justify-center flex text-3xl bg-black"
+      >
+        INSERT SINGLE ART
+      </p>
+
+      <div
+        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
+      >
+        <a
+          class="flex flex-row items-center gap-4"
+          href="https://soundcloud.com/v1ris"
+          target="_blank"
+          name="soundcloud"
+        >
+          <Soundcloud fill={svgColor} />
+          <p class="text-xl text-black">Soundcloud</p>
+        </a>
+      </div>
+
+      <div
+        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
+      >
+        <a
+          class="flex flex-row items-center gap-4"
+          href="https://open.spotify.com/artist/3QAWVvdQIrW5GGXjhXT5tH"
+          target="_blank"
+          name="spotify"
+        >
+          <Spotify fill={svgColor} />
+          <p class="text-xl text-black">Spotify</p>
+        </a>
+      </div>
+
+      <div
+        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
+      >
+        <a
+          class="flex flex-row items-center gap-4"
+          href="https://v1ris.bandcamp.com/album/bury-yourself"
+          target="_blank"
+          name="bandcamp"
+        >
+          <BandCamp fill={svgColor} />
+          <p class="text-xl text-black">BandCamp</p>
+        </a>
+      </div>
+
+      <div
+        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
+      >
+        <a
+          class="flex flex-row items-center gap-4"
+          href="https://bsky.app/profile/v1ris.com"
+          target="_blank"
+          name="bluesky"
+        >
+          <BlueSky fill={svgColor} />
+          <p class="text-xl text-black">BlueSky</p>
+        </a>
+      </div>
+
+      <div
+        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
+      >
+        <a
+          class="flex flex-row items-center gap-4"
+          href="https://www.instagram.com/v1ris_music/"
+          target="_blank"
+          name="instagram"
+        >
+          <Instagram fill={svgColor} />
+          <p class="text-xl text-black">Instagram</p>
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
