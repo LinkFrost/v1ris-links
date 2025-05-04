@@ -2,147 +2,69 @@
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import "../styles/global.css";
-
-import Soundcloud from "../../public/svg/soundcloud.svg";
-import Spotify from "../../public/svg/spotify.svg";
-import BandCamp from "../../public/svg/bandcamp.svg";
-import BlueSky from "../../public/svg/bluesky.svg";
-import Instagram from "../../public/svg/instagram.svg";
-
-const svgColor = "#000000";
+import Link from "../components/Link.astro";
 ---
 
-<!-- <a
-  class="hover:scale-125"
-  href="https://soundcloud.com/v1ris"
-  target="_blank"
-  name="soundcloud"
->
-  <Soundcloud fill={svgColor} />
-</a>
-
-<a
-  class="hover:scale-125"
-  href="https://open.spotify.com/artist/3QAWVvdQIrW5GGXjhXT5tH"
-  target="_blank"
-  name="spotify"
->
-  <Spotify fill={svgColor} />
-</a>
-
-<a
-  class="hover:scale-125"
-  href="https://v1ris.bandcamp.com/album/bury-yourself"
-  target="_blank"
-  name="bandcamp"
->
-  <BandCamp fill={svgColor} />
-</a>
-
-<a
-  class="hover:scale-125"
-  href="https://bsky.app/profile/v1ris.com"
-  target="_blank"
-  name="bluesky"
->
-  <BlueSky fill={svgColor} />
-</a>
-
-<a
-  class="hover:scale-125"
-  href="https://www.instagram.com/v1ris_music/"
-  target="_blank"
-  name="instagram"
->
-  <Instagram fill={svgColor} />
-</a> -->
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} restrictWidth={false}>
   <main>
     <div
-      class="py-12 px-8 flex flex-col gap-8 w-lg rounded-xl bg-v1risDarkPurple/50 backdrop-blur-xs"
+      class="py-12 px-8 flex flex-col gap-8 w-[300px] md:w-3xl lg:w-4xl rounded-xl bg-v1risDarkPurple/75 backdrop-blur-xs"
     >
       <h1
-        class="text-6xl font-semibold text-white text-shadow drop-shadow-xl shadow-white"
+        class="text-6xl font-semibold text-indigo-100 text-shadow drop-shadow-xl shadow-white"
       >
         v1ris
       </h1>
 
-      <h2 class="text-3xl">New Single Out Now!</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-lg md:text-2xl">New Single Coming Soon</h2>
 
-      <p
-        class="aspect-square items-center justify-center flex text-3xl bg-black"
-      >
-        INSERT SINGLE ART
-      </p>
+          <h2 class="text-5xl">Voice of Reason</h2>
 
-      <div
-        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
-      >
-        <a
-          class="flex flex-row items-center gap-4"
-          href="https://soundcloud.com/v1ris"
-          target="_blank"
-          name="soundcloud"
-        >
-          <Soundcloud fill={svgColor} />
-          <p class="text-xl text-black">Soundcloud</p>
-        </a>
-      </div>
+          <img
+            src="img/voice-of-reason-single-cover.png"
+            alt="Voice of Reason"
+            width="500px"
+          />
 
-      <div
-        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
-      >
-        <a
-          class="flex flex-row items-center gap-4"
-          href="https://open.spotify.com/artist/3QAWVvdQIrW5GGXjhXT5tH"
-          target="_blank"
-          name="spotify"
-        >
-          <Spotify fill={svgColor} />
-          <p class="text-xl text-black">Spotify</p>
-        </a>
-      </div>
+          <a
+            href="https://hypeddit.com/p5tryt"
+            target="_blank"
+            class="bg-indigo-300 p-4 rounded-xl text-xl text-black"
+            >Click to pre-save!</a
+          >
+        </div>
 
-      <div
-        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
-      >
-        <a
-          class="flex flex-row items-center gap-4"
-          href="https://v1ris.bandcamp.com/album/bury-yourself"
-          target="_blank"
-          name="bandcamp"
-        >
-          <BandCamp fill={svgColor} />
-          <p class="text-xl text-black">BandCamp</p>
-        </a>
-      </div>
+        <div class="flex flex-col gap-8 w-full justify-center">
+          <Link
+            iconPath="bandcamp"
+            text="BandCamp"
+            link="https://v1ris.bandcamp.com/music"
+          />
 
-      <div
-        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
-      >
-        <a
-          class="flex flex-row items-center gap-4"
-          href="https://bsky.app/profile/v1ris.com"
-          target="_blank"
-          name="bluesky"
-        >
-          <BlueSky fill={svgColor} />
-          <p class="text-xl text-black">BlueSky</p>
-        </a>
-      </div>
+          <Link
+            iconPath="spotify"
+            text="Spotify"
+            link="https://open.spotify.com/artist/3QAWVvdQIrW5GGXjhXT5tH"
+          />
 
-      <div
-        class="px-4 py-4 rounded-xl bg-white/50 flex flex-row justify-center items-center"
-      >
-        <a
-          class="flex flex-row items-center gap-4"
-          href="https://www.instagram.com/v1ris_music/"
-          target="_blank"
-          name="instagram"
-        >
-          <Instagram fill={svgColor} />
-          <p class="text-xl text-black">Instagram</p>
-        </a>
+          <Link
+            iconPath="applemusic"
+            text="Apple Music"
+            link="https://music.apple.com/tr/artist/v1ris/1650015922"
+          />
+
+          <Link iconPath="tidal" text="Tidal" link="" />
+
+          <Link
+            iconPath="soundcloud"
+            text="Soundcloud"
+            link="https://soundcloud.com/v1ris"
+          />
+
+          <Link text="Main Website" link="https://v1ris.com/" />
+        </div>
       </div>
     </div>
   </main>
