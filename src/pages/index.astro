@@ -8,22 +8,30 @@ import Link from "../components/Link.astro";
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} restrictWidth={false}>
   <main class="w-full flex justify-center items-center">
     <div class="flex flex-col gap-8 w-[350px] py-8 md:w-3xl lg:w-4xl">
-      <h1
-        class="text-7xl md:text-8xl font-semibold font-sanchez text-cadet text-shadow drop-shadow-xl shadow-white md:-mt-20 motion-preset-fade-lg motion-preset-slide-down"
-      >
-        v1ris
-      </h1>
+      <a href="https://v1ris.com" target="_blank">
+        <h1
+          class="text-7xl md:text-8xl font-semibold font-sanchez text-lightBlue text-shadow drop-shadow-xl shadow-white md:-mt-20 motion-preset-fade-lg motion-preset-slide-down motion-duration-1000"
+        >
+          v1ris
+        </h1>
+      </a>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div
           class="flex flex-col gap-4 w-full justify-center motion-preset-fade-md motion-preset-slide-up"
         >
-          <div class="flex flex-col text-left">
+          <div
+            class="flex flex-col text-left motion-preset-fade motion-duration-2000"
+          >
             <h2 class="text-lg md:text-2xl text-eerie">
-              New Single Coming Soon
+              New Single Coming May 26th
             </h2>
 
-            <h2 class="text-5xl text-marian font-semibold">Voice of Reason</h2>
+            <h2
+              class="text-5xl text-lightBlue font-semibold motion-preset-expand motion-scale-in-75 motion-duration-1000"
+            >
+              Voice of Reason
+            </h2>
           </div>
 
           <img
@@ -34,7 +42,7 @@ import Link from "../components/Link.astro";
         </div>
 
         <div
-          class="flex flex-col gap-8 w-full justify-center bg-beige rounded-xl p-4 motion-preset-fade-lg motion-preset-slide-up"
+          class="flex flex-col gap-8 w-full justify-center bg-beige rounded-xl p-4 motion-preset-fade-lg motion-preset-slide-up motion-duration-1500"
         >
           <h2 class="text-4xl text-eerie">Pre-Save Now!</h2>
 

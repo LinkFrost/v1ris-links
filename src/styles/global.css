@@ -17,15 +17,19 @@
   --color-marian: #3c4770;
   --color-cadet: #2a324f;
   --color-sepia: #7b4d1f;
+  --color-reseda: #6a7f48;
+  --color-rose: #fffffe;
+  --color-darkBlue: #101033;
+  --color-lightBlue: #a3f3ff;
 }
 
 .baseLayout {
   /* @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-[url(/img/digital-connection-album-cover.png)] bg-local bg-cover bg-center text-center justify-center md:py-0; */
-  @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-grass text-center justify-center;
+  @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-reseda text-center justify-center;
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 0.01px beige;
+  text-shadow: 2px 2px 0.01px #1e1b17;
 }
 
 @keyframes fade-in-first {
