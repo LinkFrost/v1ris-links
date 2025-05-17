@@ -6,64 +6,69 @@ import Link from "../components/Link.astro";
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} restrictWidth={false}>
-  <main>
-    <div
-      class="py-12 px-8 flex flex-col gap-8 w-[300px] md:w-3xl lg:w-4xl rounded-xl bg-v1risDarkPurple/75 backdrop-blur-xs"
-    >
+  <main class="w-full flex justify-center items-center">
+    <div class="flex flex-col gap-8 w-[350px] py-8 md:w-3xl lg:w-4xl">
       <h1
-        class="text-6xl font-semibold text-indigo-100 text-shadow drop-shadow-xl shadow-white"
+        class="text-7xl md:text-8xl font-semibold font-sanchez text-cadet text-shadow drop-shadow-xl shadow-white md:-mt-20 motion-preset-fade-lg motion-preset-slide-down"
       >
         v1ris
       </h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="flex flex-col gap-4">
-          <h2 class="text-lg md:text-2xl">New Single Coming Soon</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div
+          class="flex flex-col gap-4 w-full justify-center motion-preset-fade-md motion-preset-slide-up"
+        >
+          <div class="flex flex-col text-left">
+            <h2 class="text-lg md:text-2xl text-eerie">
+              New Single Coming Soon
+            </h2>
 
-          <h2 class="text-5xl">Voice of Reason</h2>
+            <h2 class="text-5xl text-marian font-semibold">Voice of Reason</h2>
+          </div>
 
           <img
             src="img/voice-of-reason-single-cover.png"
             alt="Voice of Reason"
             width="500px"
           />
-
-          <a
-            href="https://hypeddit.com/p5tryt"
-            target="_blank"
-            class="bg-indigo-300 p-4 rounded-xl text-xl text-black"
-            >Click to pre-save!</a
-          >
         </div>
 
-        <div class="flex flex-col gap-8 w-full justify-center">
-          <Link
-            iconPath="bandcamp"
-            text="BandCamp"
-            link="https://v1ris.bandcamp.com/music"
-          />
+        <div
+          class="flex flex-col gap-8 w-full justify-center bg-beige rounded-xl p-4 motion-preset-fade-lg motion-preset-slide-up"
+        >
+          <h2 class="text-4xl text-eerie">Pre-Save Now!</h2>
 
           <Link
             iconPath="spotify"
             text="Spotify"
-            link="https://open.spotify.com/artist/3QAWVvdQIrW5GGXjhXT5tH"
+            link="https://api.ffm.to/sl/e/ps/60v5ban?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwLjE1OyBydjoxMzguMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xMzguMCIsImJyb3dzZXIiOnsibmFtZSI6IkZpcmVmb3giLCJ2ZXJzaW9uIjoiMTM4LjAiLCJtYWpvciI6IjEzOCJ9LCJjcHUiOnt9LCJkZXZpY2UiOnsibW9kZWwiOiJNYWNpbnRvc2giLCJ2ZW5kb3IiOiJBcHBsZSJ9LCJlbmdpbmUiOnsibmFtZSI6IkdlY2tvIiwidmVyc2lvbiI6IjEzOC4wIn0sIm9zIjp7Im5hbWUiOiJtYWNPUyIsInZlcnNpb24iOiIxMC4xNSJ9fSwiY2xpZW50Ijp7InJpZCI6IjU0ZTk1ZTM3LTA1ZWEtNDJlZS04NWE4LWE3MDM5MzkwZDQ3NiIsInNpZCI6ImU3MTdhY2FlLTRiMmQtNGRlNC04OGJlLTE5ZGU1Yzk5NTY2ZSIsImlwIjoiMjQuMTUxLjUyLjY5IiwicmVmIjoiIiwiaG9zdCI6ImZmbS50byIsImxhbmciOiJlbi1VUyIsImlwQ291bnRyeSI6IlVTIn0sImlzV2VicFN1cHBvcnRlZCI6ZmFsc2UsImlzRnJvbUVVIjpmYWxzZSwiY291bnRyeUNvZGUiOiJVUyIsImlzQm90IjpmYWxzZSwidXNlQWZmIjoib3JpZ2luIiwidmlkIjoiNjdmMzVmZDAtY2ZkYy00Nzc2LThlMmYtYTZkYWIzYTNjODU0IiwiaWQiOiI2ODE4MDZmNzNmMDAwMDBjMDA3ZTAyYmMiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbS9hdXRob3JpemU_Y2xpZW50X2lkPTY2ZDNjZGI0NDgwNzRhMGQ4OGU5YjA4YmFhZjJmM2Q3JnJlc3BvbnNlX3R5cGU9Y29kZSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnNwb3RpZnklMkZhdXRob3JpemUmc2NvcGU9dXNlci1yZWFkLXByaXZhdGUlMjB1c2VyLXJlYWQtYmlydGhkYXRlJTIwdXNlci1yZWFkLWVtYWlsJTIwdXNlci1saWJyYXJ5LW1vZGlmeSUyMHVzZXItbGlicmFyeS1yZWFkJTIwdXNlci1yZWFkLXJlY2VudGx5LXBsYXllZCUyMHVzZXItZm9sbG93LXJlYWQlMjB1c2VyLWZvbGxvdy1tb2RpZnklMjB1c2VyLXRvcC1yZWFkJTIwcGxheWxpc3QtbW9kaWZ5LXB1YmxpYyUyMHBsYXlsaXN0LXJlYWQtcHJpdmF0ZSUyMHBsYXlsaXN0LW1vZGlmeS1wcml2YXRlJnN0YXRlPWV5SmtZa3hwYm10SlpDSTZJalk0TVRnd05tWTNNMll3TURBd01HTXdNRGRsTURKaVl5SXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKVlV5SXNJbk5vYjNKMFNXUWlPaUkyTUhZMVltRnVJaXdpWkc5dFlXbHVJam9pYUhSMGNITTZMeTltWm0wdWRHOGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluTndiM1JwWm5raUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyWm1iUzUwYnk4Mk1IWTFZbUZ1TDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMk9ERTRNRFpsWkRKak1EQXdNREE1TURCaFlUTmpZVElpTENKaGNuUnBjM1JQZDI1bGNpSTZJalk0TVRnd05tVmtNamd3TURBd01tVXdNRGMyWTJOaFppSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSnBjMFp5YjIxRlZTSTZabUZzYzJVc0lteHBibXRVZVhCbElqcHVkV3hzTENKMWMyVnlTVkFpT2lJeU5DNHhOVEV1TlRJdU5qa2lMQ0p5WlhkaGNtUlZjMlZ5U1dRaU9tNTFiR3dzSW5KbFptVnljbUZzU1dRaU9tNTFiR3dzSW5WMWFXUWlPaUkyTjJZek5XWmtNQzFqWm1SakxUUTNOell0T0dVeVppMWhObVJoWWpOaE0yTTROVFFpZlE9PSIsInNydmMiOiJzcG90aWZ5IiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiI2MHY1YmFuIiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOnRydWUsIm93bmVyIjoiNjgxODA2ZWQyODAwMDAyZTAwNzZjY2FmIiwiYXIiOiI2ODE4MDZlZDJjMDAwMDA5MDBhYTNjYTIiLCJpc1Nob3J0TGluayI6ZmFsc2UsIm5hdGl2ZSI6ZmFsc2V9"
           />
 
           <Link
             iconPath="applemusic"
             text="Apple Music"
-            link="https://music.apple.com/tr/artist/v1ris/1650015922"
+            link="https://api.ffm.to/sl/e/ps/5ldqo9b?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwLjE1OyBydjoxMzguMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xMzguMCIsImJyb3dzZXIiOnsibmFtZSI6IkZpcmVmb3giLCJ2ZXJzaW9uIjoiMTM4LjAiLCJtYWpvciI6IjEzOCJ9LCJjcHUiOnt9LCJkZXZpY2UiOnsibW9kZWwiOiJNYWNpbnRvc2giLCJ2ZW5kb3IiOiJBcHBsZSJ9LCJlbmdpbmUiOnsibmFtZSI6IkdlY2tvIiwidmVyc2lvbiI6IjEzOC4wIn0sIm9zIjp7Im5hbWUiOiJtYWNPUyIsInZlcnNpb24iOiIxMC4xNSJ9fSwiY2xpZW50Ijp7InJpZCI6ImUwYTBjZjlhLTQzMTQtNDM4Mi1hOGQ2LWEzZTU2MDIzMTVhZSIsInNpZCI6ImU3MTdhY2FlLTRiMmQtNGRlNC04OGJlLTE5ZGU1Yzk5NTY2ZSIsImlwIjoiMTA0LjI4LjI0MS4xNTAiLCJyZWYiOiIiLCJob3N0IjoiZmZtLnRvIiwibGFuZyI6ImVuLVVTIiwiaXBDb3VudHJ5IjoiVVMifSwiaXNXZWJwU3VwcG9ydGVkIjpmYWxzZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IlVTIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJiNzJlZjhmNC02YjJlLTQ0YTgtYWEzNy05ZTdhN2RiMGYwYTkiLCJpZCI6IjY4MTgwZDQ2MzYwMDAwMzMwMDE0ZTIxMyIsInBydiI6ZmFsc2UsImlzUHJlUiI6dHJ1ZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL2FwaS5mZm0udG8vd2ViaG9vay9hcHBsZS9hdXRob3JpemU_c3RhdGU9ZXlKa1lreHBibXRKWkNJNklqWTRNVGd3WkRRMk16WXdNREF3TXpNd01ERTBaVEl4TXlJc0ltRmpkR2x2YmxSNWNHVWlPbTUxYkd3c0ltTjBZU0k2SWxCeVpTMUJaR1FpTENKMWMyVnlRMjkxYm5SeWVTSTZJbFZUSWl3aWMyaHZjblJKWkNJNklqVnNaSEZ2T1dJaUxDSmtiMjFoYVc0aU9pSm9kSFJ3Y3pvdkwyWm1iUzUwYnlJc0luTmxjblpwWTJWT1lXMWxJam9pWVhCd2JHVWlMQ0p3Y205a2RXTjBJam9pYzIxaGNuUnNhVzVySWl3aWNtVmthWEpsWTNSVmNta2lPaUpvZEhSd2N6b3ZMMlptYlM1MGJ5ODFiR1J4YnpsaUwzQnlaWE5oZG1WallXeHNZbUZqYXlJc0ltWmhiR3hpWVdOclZYSnNJanB1ZFd4c0xDSnBjMUJ5WlZKbGJHVmhjMlVpT25SeWRXVXNJbWx6Um5WMGRYSmxVbVZzWldGelpTSTZkSEoxWlN3aVlYSjBhWE4wU1dRaU9pSTJPREU0TURabFpESmpNREF3TURBNU1EQmhZVE5qWVRJaUxDSmhjblJwYzNSUGQyNWxjaUk2SWpZNE1UZ3dObVZrTWpnd01EQXdNbVV3TURjMlkyTmhaaUlzSW1GamRHbHZia2xrSWpwdWRXeHNMQ0puWkhCeVJXNW1iM0pqWlNJNlptRnNjMlVzSW14cGJtdFVlWEJsSWpwdWRXeHNMQ0oxYzJWeVNWQWlPaUl4TURRdU1qZ3VNalF4TGpFMU1DSXNJbkpsZDJGeVpGVnpaWEpKWkNJNmJuVnNiQ3dpY21WbVpYSnlZV3hKWkNJNmJuVnNiQ3dpZFhWcFpDSTZJbUkzTW1WbU9HWTBMVFppTW1VdE5EUmhPQzFoWVRNM0xUbGxOMkUzWkdJd1pqQmhPU0o5Iiwic3J2YyI6ImFwcGxlIiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiI1bGRxbzliIiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOnRydWUsIm93bmVyIjoiNjgxODA2ZWQyODAwMDAyZTAwNzZjY2FmIiwiYXIiOiI2ODE4MDZlZDJjMDAwMDA5MDBhYTNjYTIiLCJpc1Nob3J0TGluayI6ZmFsc2UsIm5hdGl2ZSI6ZmFsc2V9"
           />
 
-          <Link iconPath="tidal" text="Tidal" link="" />
+          <Link
+            iconPath="bandcamp"
+            text="BandCamp"
+            link="https://v1ris.bandcamp.com/follow_me"
+          />
 
           <Link
+            iconPath="tidal"
+            text="Tidal"
+            link="https://api.ffm.to/sl/e/ps/bvxmppj?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwLjE1OyBydjoxMzguMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xMzguMCIsImJyb3dzZXIiOnsibmFtZSI6IkZpcmVmb3giLCJ2ZXJzaW9uIjoiMTM4LjAiLCJtYWpvciI6IjEzOCJ9LCJjcHUiOnt9LCJkZXZpY2UiOnsibW9kZWwiOiJNYWNpbnRvc2giLCJ2ZW5kb3IiOiJBcHBsZSJ9LCJlbmdpbmUiOnsibmFtZSI6IkdlY2tvIiwidmVyc2lvbiI6IjEzOC4wIn0sIm9zIjp7Im5hbWUiOiJtYWNPUyIsInZlcnNpb24iOiIxMC4xNSJ9fSwiY2xpZW50Ijp7InJpZCI6IjUwMDFkOTBhLTlkNjgtNDM0Mi1iOWMxLWI0NGJiNGEzN2Q2MCIsInNpZCI6ImU3MTdhY2FlLTRiMmQtNGRlNC04OGJlLTE5ZGU1Yzk5NTY2ZSIsImlwIjoiMTA0LjI4LjI0MS4xNTAiLCJyZWYiOiIiLCJob3N0IjoiZmZtLnRvIiwibGFuZyI6ImVuLVVTIiwiaXBDb3VudHJ5IjoiVVMifSwiaXNXZWJwU3VwcG9ydGVkIjpmYWxzZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IlVTIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJzZWxmIiwidmlkIjoiYmVlMjUxMGMtNGI2MC00Y2JiLWFhMDMtYWE1MTQ1NTUyMDNmIiwiaWQiOiI2ODE4MGRiYzM2MDAwMDExMDAxNGUyMTQiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9sb2dpbi50aWRhbC5jb20vYXV0aG9yaXplLz9jbGllbnRfaWQ9SmkzUVJaQ1FoNFlvanBkSyZyZXNwb25zZV90eXBlPWNvZGUmcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZ0aWRhbCUyRmF1dGhvcml6ZSZzY29wZT1yX3VzciUyQndfdXNyJnN0YXRlPWV5SmtZa3hwYm10SlpDSTZJalk0TVRnd1pHSmpNell3TURBd01URXdNREUwWlRJeE5DSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKVlV5SXNJbk5vYjNKMFNXUWlPaUppZG5odGNIQnFJaXdpWkc5dFlXbHVJam9pYUhSMGNITTZMeTltWm0wdWRHOGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluUnBaR0ZzSWl3aWNISnZaSFZqZENJNkluTnRZWEowYkdsdWF5SXNJbkpsWkdseVpXTjBWWEpwSWpvaWFIUjBjSE02THk5bVptMHVkRzh2WW5aNGJYQndhaTl3Y21WellYWmxZMkZzYkdKaFkyc2lMQ0ptWVd4c1ltRmphMVZ5YkNJNmJuVnNiQ3dpYVhOUWNtVlNaV3hsWVhObElqcDBjblZsTENKcGMwWjFkSFZ5WlZKbGJHVmhjMlVpT25SeWRXVXNJbUZ5ZEdsemRFbGtJam9pTmpneE9EQTJaV1F5WXpBd01EQXdPVEF3WVdFelkyRXlJaXdpWVhKMGFYTjBUM2R1WlhJaU9pSTJPREU0TURabFpESTRNREF3TURKbE1EQTNObU5qWVdZaUxDSmhZM1JwYjI1SlpDSTZiblZzYkN3aVoyUndja1Z1Wm05eVkyVWlPbVpoYkhObExDSnNhVzVyVkhsd1pTSTZiblZzYkN3aWRYTmxja2xRSWpvaU1UQTBMakk0TGpJME1TNHhOVEFpTENKeVpYZGhjbVJWYzJWeVNXUWlPbTUxYkd3c0luSmxabVZ5Y21Gc1NXUWlPbTUxYkd3c0luVjFhV1FpT2lKaVpXVXlOVEV3WXkwMFlqWXdMVFJqWW1JdFlXRXdNeTFoWVRVeE5EVTFOVEl3TTJZaWZRPT0mYXV0b3JlZGlyZWN0PXRydWUiLCJzcnZjIjoidGlkYWwiLCJwcm9kdWN0Ijoic21hcnRsaW5rIiwic2hvcnRJZCI6ImJ2eG1wcGoiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI2ODE4MDZlZDI4MDAwMDJlMDA3NmNjYWYiLCJhciI6IjY4MTgwNmVkMmMwMDAwMDkwMGFhM2NhMiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0"
+          />
+
+          <!-- <Link
             iconPath="soundcloud"
             text="Soundcloud"
             link="https://soundcloud.com/v1ris"
-          />
+          /> -->
 
-          <Link text="Main Website" link="https://v1ris.com/" />
+          <!-- <Link text="Main Website" link="https://v1ris.com/" /> -->
         </div>
       </div>
     </div>

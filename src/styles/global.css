@@ -1,14 +1,59 @@
 @import "tailwindcss";
+@plugin "tailwindcss-motion";
 
 @theme {
   --font-sanchez: "Sanchez", "sans-serrif";
+  --font-inter: "Inter", "sans-serrif";
 }
 
 @theme {
   --color-v1risGray: #1c1c21;
   --color-v1risDarkPurple: #17144c;
+  --color-grass: #ced453;
+  --color-beige: #fafae3;
+  --color-moss: #56541f;
+  --color-bone: #d9d9c6;
+  --color-eerie: #1e1b17;
+  --color-marian: #3c4770;
+  --color-cadet: #2a324f;
+  --color-sepia: #7b4d1f;
 }
 
 .baseLayout {
-  @apply w-full flex flex-col items-center font-sanchez mx-auto relative min-h-screen bg-[url(/img/digital-connection-album-cover.png)] backdrop-blur-xl bg-local bg-cover bg-center text-center justify-center py-8 md:py-0;
+  /* @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-[url(/img/digital-connection-album-cover.png)] bg-local bg-cover bg-center text-center justify-center md:py-0; */
+  @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-grass text-center justify-center;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0.01px beige;
+}
+
+@keyframes fade-in-first {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-second {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-first {
+  animation: fade-in-first 0.5s ease-in-out forwards;
+}
+
+.animate-fade-in-second {
+  animation: fade-in-second 1s ease-in-out forwards;
+}
+
+.animate-fade-in-third {
+  animation: fade-in-second 1.25s ease-in-out forwards;
 }

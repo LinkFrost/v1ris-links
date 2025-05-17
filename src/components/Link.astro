@@ -6,15 +6,15 @@ const svgColor = "#000000";
 ---
 
 <a
-  class="px-4 py-4 rounded-xl bg-white/50 grid grid-cols-[1fr_max-content_1fr]"
+  class="px-4 py-4 rounded-xl bg-sepia grid grid-cols-[1fr_max-content_1fr] hover:scale-103 transition-all duration-150 hover:bg-amber-700"
   href={link}
   target="_blank"
   name="spotify"
 >
   {
     iconPath && (
-      <Icon name={iconPath} class="text-black justify-self-start" size={32} />
+      <Icon name={iconPath} class="text-beige justify-self-start" size={32} />
     )
   }
-  <p class="text-xl text-black col-start-2">{text}</p>
+  <p class="text-xl text-beige col-start-2">{text}</p>
 </a>
