@@ -5,7 +5,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://v1ris-links.vercel.app/",
+  site: "https://links.v1ris.com/",
   vite: {
     plugins: [tailwindcss()],
   },
