@@ -1,2 +1,2 @@
-export const SITE_TITLE = "v1ris - Quick Links";
-export const SITE_DESCRIPTION = "Check out the latest from v1ris";
+export const SITE_TITLE = "v1ris - VOICE OF REASON";
+export const SITE_DESCRIPTION = "Voice of Reason coming soon on May 26th!";
