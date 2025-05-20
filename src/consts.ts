@@ -1,3 +1,3 @@
-export const SITE_TITLE = "VOICE OF REASON";
+export const SITE_TITLE = "voice of reason";
 export const SITE_DESCRIPTION =
-  "v1ris - Voice of Reason coming soon on May 26th!";
+  "v1ris - voice of reason coming soon on May 26th!";
