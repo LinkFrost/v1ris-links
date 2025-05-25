@@ -63,8 +63,7 @@
 }
 
 .baseLayout {
-  /* @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-[url(/img/digital-connection-album-cover.png)] bg-local bg-cover bg-center text-center justify-center md:py-0; */
-  @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-reseda text-center justify-center;
+  @apply w-full flex flex-col font-inter items-center mx-auto relative min-h-screen bg-[url(/img/voice-of-reason-single-cover.png)] bg-local bg-cover bg-center text-center justify-center;
 }
 
 .text-shadow {

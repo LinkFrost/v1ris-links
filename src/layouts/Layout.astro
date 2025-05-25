@@ -11,8 +11,7 @@ const { title, description, image = "/favicon.ico" } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
 
-  <body class="baseLayout font-azeret flex flex-col">
-    <slot class="flex-1" />
-    <!-- <div class="text-black"><div>hi</div></div> -->
+  <body class="baseLayout font-azeret">
+    <slot />
   </body>
 </html>
